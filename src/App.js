@@ -31,7 +31,7 @@ export default function App() {
           type="text"
           value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
-          disabled={isLoading}
+          
           className="mb-3 p-1 rounded-sm bg-amber-500"
         />
         <br />
