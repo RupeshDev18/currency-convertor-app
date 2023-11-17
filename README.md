@@ -4,6 +4,8 @@
 
 A simple React app that allows users to convert currency between INR, CAD, USD, and EUR. Built with Tailwind CSS.
 
+# Website is live on : <br>
+https://cashflowconvert.netlify.app/
 ## Features
 
 - Convert currency between INR, CAD, USD, and EUR.
