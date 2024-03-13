@@ -1,7 +1,7 @@
 // `https://api.frankfurter.app/latest?amount=100&from=EUR&to=USD`
 
 import { useEffect, useState } from "react";
-
+import "./App.css";
 export default function App() {
   const [amount, setAmount] = useState(1);
   const [fromCur, setFromCur] = useState("EUR");
@@ -25,46 +25,51 @@ export default function App() {
     [amount, fromCur, toCur]
   );
   return (
-    <div className="bg-emerald-500 rounded-lg">
-      <div className="box">
-        <input
-          type="text"
-          value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
-          disabled={isLoading}
-          className="mb-3 p-1 rounded-sm bg-amber-500"
-        />
-        <br />
-        <span className="m-3 mx-0 ">
-          <select
-            value={fromCur}
-            onChange={(e) => setFromCur(e.target.value)}
-            disabled={isLoading}
-            className="rounded-sm bg-amber-500"
-          >
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="CAD">CAD</option>
-            <option value="INR">INR</option>
-          </select>
-        </span>
-        <span className="m-3">
-          <select
-            value={toCur}
-            onChange={(e) => setToCur(e.target.value)}
-            disabled={isLoading}
-            className="rounded-sm bg-amber-500"
-          >
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="CAD">CAD</option>
-            <option value="INR">INR</option>
-          </select>
-        </span>
-        <p className="font-medium mt-2">
-          {converted} {toCur}
-        </p>
+    <>
+      <div className="container">
+        <div className="from">
+          <h3>Currency</h3>
+          <div className="box">
+            <input
+              autoFocus
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+              disabled={isLoading}
+              className="mb-3 p-1 rounded-sm "
+            />
+            <select
+              value={fromCur}
+              onChange={(e) => setFromCur(e.target.value)}
+              disabled={isLoading}
+              className=""
+            >
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="CAD">CAD</option>
+              <option value="INR">INR</option>
+            </select>
+          </div>
+        </div>
+        <div className="to">
+          <div className="box">
+            <div className="temp">
+              <p className="font-medium mt-2">{converted}</p>
+              <select
+                value={toCur}
+                onChange={(e) => setToCur(e.target.value)}
+                disabled={isLoading}
+                className=""
+              >
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="CAD">CAD</option>
+                <option value="INR">INR</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

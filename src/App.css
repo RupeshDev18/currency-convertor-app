@@ -6,13 +6,11 @@
   padding: 30px;
   font-family: sans-serif;
   text-align: center;
-  
 }
 
-.box{
-  margin: 10px;
-  padding: 60px;
-}
+/* .box {
+  
+} */
 
 body {
   margin: 0;
@@ -21,4 +19,66 @@ body {
   align-items: center;
   height: 100vh;
   /* 100% of the viewport height */
+}
+.container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  text-align: center;
+}
+.from {
+  padding: 5px;
+  background-image: linear-gradient(red, rgb(240, 123, 123));
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+}
+.to {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(252, 47, 47);
+  font-size: 20px;
+}
+.box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px;
+  padding: 60px;
+}
+.temp {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 40px;
+}
+.temp select {
+  margin-top: 8px;
+}
+select {
+  scroll-behavior: smooth;
+  width: 70px;
+  padding: 0;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+}
+.from select option {
+  background-color: rgb(196, 77, 77);
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  margin-bottom: 10px;
+}
+input {
+  width: 150px;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+}
+p {
+  border-bottom: 2px solid rgb(252, 47, 47);
 }

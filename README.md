@@ -1,6 +1,6 @@
 # Currency Converter App
 
-<img src='currency-convertor.png' alt='' width='300px'/>
+![currency convertor](currency-convertor1.png)
 
 A simple React app that allows users to convert currency between INR, CAD, USD, and EUR. Built with Tailwind CSS.
 
